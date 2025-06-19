@@ -1,15 +1,195 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <link rel="stylesheet" href="web.css">
-    <title>Portfolio</title>
-  </head>
+<html lang="en">
 
-  <body>
-    <header>Portfolio</header>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    @vite('resources/css/app.css')
 
-    <main>
-      <h1>hi</h1>
-    </main>
-  </body>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Quicksand:wght@300..700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Quicksand', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background: linear-gradient(to right, #d1f7ff, #fce7f3, #ffe9d9);
+        }
+
+        .font-italiana {
+            font-family: 'Italiana', cursive;
+        }
+
+        .content-wrapper {
+            flex-grow: 1;
+        }
+    </style>
+</head>
+
+<body>
+    {{-- Main content wrapper, centered with max width and padding --}}
+    <div class="container mx-auto max-w-screen-xl p-20">
+
+        {{-- Header Section: "My Portfolio" title aligned to the right --}}
+        <header class="mb-16 flex justify-end">
+            <h1 class="text-8xl font-italiana mt-4">My Portfolio</h1>
+        </header>
+
+        {{-- Main Content Grid: Two columns on medium screens and up --}}
+        <main class="grid grid-cols-1 md:grid-cols-3 gap-16">
+
+            {{-- Left Column: Stefanie Card & Experiences --}}
+            <div class="md:col-span-1">
+                {{-- Stefanie Card --}}
+                <div class="bg-white p-6 rounded-3xl shadow-md mb-15">
+                    {{-- Placeholder for profile image/avatar --}}
+                    <div class="bg-gray-100 rounded-2xl h-56 flex items-center justify-center mb-6">
+                        <svg class="h-24 w-24 text-gray-400" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM12 12.5c2.757 0 5-2.243 5-5s-2.243-5-5-5-5 2.243-5 5 2.243 5 5 5z" />
+                        </svg>
+                    </div>
+                    <h2 class="text-2xl font-semibold mb-2 text-gray-900">Stefanie</h2>
+                    <div class="text-sm space-y-2 text-gray-700">
+                        <p class="flex items-center"><svg class="w-4 h-4 mr-2 text-gray-500" fill="currentColor"
+                                viewBox="0 0 20 20">
+                                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                            </svg>stefanie.agahari@gmail.com</p>
+                        <p class="flex items-center"><svg class="w-4 h-4 mr-2 text-gray-500" fill="currentColor"
+                                viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
+                                    clip-rule="evenodd" />
+                            </svg>saurelia02@student.ciputra.ac.id</p>
+                        <p class="flex items-center"><svg class="w-4 h-4 mr-2 text-gray-500" fill="currentColor"
+                                viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M7 2a2 2 0 00-2 2v12a2 2 0 002 2h6a2 2 0 002-2V4a2 2 0 00-2-2H7zm3 14a1 1 0 100-2 1 1 0 000 2z"
+                                    clip-rule="evenodd" />
+                            </svg> +62 821-3210-9581</p>
+                        <p class="flex items-center"><svg class="w-4 h-4 mr-2 text-gray-500" fill="currentColor"
+                                viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zM6 10a2 2 0 114 0H6zm7-2a2 2 0 10-4 0h4z"
+                                    clip-rule="evenodd" />
+                            </svg>@stfnghr_</p>
+                    </div>
+                </div>
+
+                {{-- Experiences Section --}}
+                <div>
+                    <h2 class="text-3xl font-semibold mb-6 text-gray-900">Experiences</h2>
+                    <ul class="space-y-6 text-gray-700">
+                        <li>
+                            <p class="font-medium">February - June, 2024</p>
+                            <p class="text-lg">UCAN (Universitas Ciputra Awarding Night)</p>
+                            <p class="text-sm text-gray-500">Documentation Coordinator</p>
+                        </li>
+                        <li>
+                            <p class="font-medium">April - September, 2024</p>
+                            <p class="text-lg">O-week (Orientation Week) 2024</p>
+                            <p class="text-sm text-gray-500">Student Mentor</p>
+                        </li>
+                        <li>
+                            <p class="font-medium">July - October, 2024</p>
+                            <p class="text-lg">MHW (Mental Health Week) 2024</p>
+                            <p class="text-sm text-gray-500">Documentation Coordinator</p>
+                        </li>
+                        <li>
+                            <p class="font-medium">August 2024 - March 2025</p>
+                            <p class="text-lg">UCDC (Universitas Ciputra Debate Competition) 2025</p>
+                            <p class="text-sm text-gray-500">Documentation Coordinator</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            {{-- Right Column: Hello, Education, Projects. This column naturally aligns right due to grid layout. --}}
+            <div class="md:col-span-2 text-right">
+                {{-- Hello Section --}}
+                <div class="mb-15 mt-40">
+                    {{-- Removed `items-end` as it doesn't apply to text alignment on a block element --}}
+                    <h2 class="text-4xl font-semibold mb-4 text-gray-900">Hello!</h2>
+                    <p class="text-lg leading-relaxed mb-6 text-gray-800">
+                        I’m Stefanie Aurelia Mercy Agahari, an Informatics student at Ciputra University Surabaya. I
+                        have a strong interest in web development and enjoy exploring UI design to create user-friendly
+                        and visually appealing digital products. I’m also passionate about learning new things, whether
+                        it’s new technologies, design trends, or development tools, to continuously improve my skills
+                        and broaden my knowledge.
+                    </p>
+                    <a href="https://linkedin.com/in/stefanieagahari"
+                        class="inline-block bg-white border border-gray-300 text-gray-700 py-2 px-6 rounded-full text-sm hover:bg-gray-50 transition-colors duration-200">
+                        linkedin.com/in/stefanieagahari
+                    </a>
+                </div>
+
+                {{-- Education Section --}}
+                <div class="mb-15">
+                    {{-- Removed `items-end` --}}
+                    <h2 class="text-3xl font-semibold mb-6 text-gray-900">Education</h2>
+                    <div class="space-y-6 text-gray-700">
+                        <div>
+                            <p class="font-medium">2020 - 2023</p>
+                            <p class="text-lg">SMA Negeri 1 Kediri</p>
+                            <p class="text-sm text-gray-500">Mathematics and Science</p>
+                        </div>
+                        <div>
+                            <p class="font-medium">2023</p>
+                            <p class="text-lg">Universitas Ciputra Surabaya</p>
+                            <p class="text-sm text-gray-500">Informatics</p>
+                        </div>
+                    </div>
+                </div>
+
+                {{-- Projects Section --}}
+                <div>
+                    {{-- Removed `items-end` --}}
+                    <h2 class="text-3xl font-semibold mb-6 text-gray-900">Projects</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        {{-- Project 1 --}}
+                        <div class="bg-white p-6 rounded-3xl shadow-md">
+                            <div class="bg-gray-100 rounded-2xl h-40 flex items-center justify-center mb-4">
+                                {{-- Placeholder for project image --}}
+                            </div>
+                            <h3 class="text-xl font-semibold mb-1 text-gray-900">Delish App</h3>
+                            <p class="text-sm text-gray-600">Software Engineering, 2025</p>
+                        </div>
+                        {{-- Project 2 --}}
+                        <div class="bg-white p-6 rounded-3xl shadow-md">
+                            <div class="bg-gray-100 rounded-2xl h-40 flex items-center justify-center mb-4">
+                                {{-- Placeholder for project image --}}
+                            </div>
+                            <h3 class="text-xl font-semibold mb-1 text-gray-900">FoodDash</h3>
+                            <p class="text-sm text-gray-600">Web Development, 2024</p>
+                        </div>
+                        {{-- Project 3 --}}
+                        <div class="bg-white p-6 rounded-3xl shadow-md">
+                            <div class="bg-gray-100 rounded-2xl h-40 flex items-center justify-center mb-4">
+                                {{-- Placeholder for project image --}}
+                            </div>
+                            <h3 class="text-xl font-semibold mb-1 text-gray-900">Dough Re-Mi</h3>
+                            <p class="text-sm text-gray-600">Digital Entrepreneurship and Innovation, 2025</p>
+                        </div>
+                        {{-- Project 4 --}}
+                        <div class="bg-white p-6 rounded-3xl shadow-md">
+                            <div class="bg-gray-100 rounded-2xl h-40 flex items-center justify-center mb-4">
+                                {{-- Placeholder for project image --}}
+                            </div>
+                            <h3 class="text-xl font-semibold mb-1 text-gray-900">Back2You</h3>
+                            <p class="text-sm text-gray-600">Web Development, 2025</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
 </html>
